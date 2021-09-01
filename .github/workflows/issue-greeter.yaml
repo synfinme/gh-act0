@@ -18,4 +18,4 @@ jobs:
 
     - name: Sleep for a while...
       run:
-        sleep 20
+        sleep 25
