@@ -36,3 +36,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lets print something
+        run: echo something
+
+      - name: Lets sleep for a while!
+        run: sleep 20
+
+      - name: Lets inform our DONE state
+        run: echo the job was completed
