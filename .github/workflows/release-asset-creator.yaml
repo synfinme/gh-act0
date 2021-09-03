@@ -1,0 +1,16 @@
+name: release-asset-creator
+on:
+  release:
+    types: [published]
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    env:
+      ARCHIVE_NAME: ${{ github.event.repository.name }}-${{ github.event.release.tag_name }}
+    steps:
+      - name: download-source
+        run: curl -sL "${{ github.event.release.tarball_url }}" >"$ARCHIVE_NAME".tar.gz
+      - name: unzip-source
+        run: mkdir "$ARCHIVE_NAME" && tar -xzf "$ARCHIVE_NAME".tar.gz -C "$ARCHIVE_NAME" --strip-components 1
+      - name: see what we have
+        run: find . -type f -exec ls -l {} \;
