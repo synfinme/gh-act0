@@ -26,3 +26,4 @@ jobs:
         ip addr show || ifconfig
         hostname
         df
+    needs: first-job
