@@ -8,11 +8,11 @@ jobs:
       run: sleep 5
     - name: first job, second step
       run: echo "Hello from the first job!"
-    - name: first job, third step
-      run: |
-        ip addr show || ifconfig
-        hostname
-        df
+#   - name: first job, third step
+#     run: |
+#       ip addr show || ifconfig
+#       hostname
+#       df
     - name: Get Pokemon name
       uses: ./
       id: pokemon
