@@ -13,3 +13,8 @@ jobs:
         ip addr show || ifconfig
         hostname
         df
+    - name: Get Pokemon name
+      uses: ./
+      id: pokemon
+      with:
+        pokemon_id: 150
