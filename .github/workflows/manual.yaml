@@ -30,3 +30,5 @@ jobs:
       id: pokemon
       with:
         pokemon_id: 150
+    - name: Get the pokemon
+      run: echo "${{ steps.pokemon.outputs.pokemon_name }} attacks!"
