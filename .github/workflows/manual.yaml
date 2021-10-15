@@ -26,7 +26,7 @@ jobs:
 #       hostname
 #       df
     - name: Get Pokemon name
-      uses: ./gh-act0/
+      uses: ./gh-act0/.github/actions/pokemon/
       id: pokemon
       with:
         pokemon_id: 150
